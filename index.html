@@ -2,42 +2,70 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Alperen & Baran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ares</title>
     <style>
-        body {
+        /* Sayfa ortalama ve mobil uyumluluk ayarları */
+        html, body {
+            height: 100%;
             margin: 0;
-            padding: 10px;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: flex-start;
-            overflow: hidden; /* Kaydırma çubuğunu gizler */
-            height: 100vh;
-            font-family: sans-serif;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
         }
-        span {
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Butonu dikeyde ortalar */
+            align-items: center;    /* Butonu yatayda ortalar */
+            position: relative;
+        }
+
+        /* Ares Butonu Stili */
+        .ares-btn {
+            display: inline-block;
+            padding: 15px 40px;
             font-size: 20px;
             font-weight: bold;
-            color: #ff4757;
-            margin: 5px;
-            white-space: nowrap;
+            color: #ffffff;
+            background-color: #ff4757; /* Dikkat çekici modern bir kırmızı/pembe tonu */
+            text-decoration: none;
+            border-radius: 50px; /* Yuvarlatılmış köşeler */
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+            text-align: center;
+            max-width: 80%; /* Mobilde ekrandan taşmaması için */
+        }
+
+        /* Butona basılma hissi */
+        .ares-btn:active {
+            transform: scale(0.95);
+            background-color: #e03d49;
+        }
+
+        /* En alttaki teşekkür yazısı */
+        .footer-text {
+            position: absolute;
+            bottom: 20px; /* Ekranın en altından pay bırakır */
+            font-size: 12px;
+            color: #7f8c8d;
+            text-align: center;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
 
-<script>
-    // Ekranı doldurana kadar yazıyı döngü ile ekler
-    const container = document.body;
-    const text = "ALPEREN BARANI ÇOK SEVİYORUM ";
-    
-    for (let i = 0; i < 1000; i++) {
-        const span = document.createElement('span');
-        span.textContent = text;
-        container.appendChild(span);
-    }
-</script>
+    <!-- Yönlendirme Butonu -->
+    <a href="https://youtu.be/ekFLaTC0D5c?si=jRKWLU9x5fBFAqGU" class="ares-btn">Ares</a>
+
+    <!-- Alt Kısım Yazısı -->
+    <div class="footer-text">
+        canım arkadaşım alperen barana teşekkür ederim
+    </div>
 
 </body>
 </html>
