@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Alperen & Baran</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            overflow: hidden; /* Kaydırma çubuğunu gizler */
+            height: 100vh;
+            font-family: sans-serif;
+        }
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff4757;
+            margin: 5px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Ekranı doldurana kadar yazıyı döngü ile ekler
+    const container = document.body;
+    const text = "ALPEREN BARANI ÇOK SEVİYORUM ";
+    
+    for (let i = 0; i < 1000; i++) {
+        const span = document.createElement('span');
+        span.textContent = text;
+        container.appendChild(span);
+    }
+</script>
+
+</body>
+</html>
